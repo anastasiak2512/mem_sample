@@ -1,5 +1,7 @@
 #include <iostream>
+#include <memory>
 #include <cstring>
+#include "BinaryTree.h"
 
 int foo(int x)
 {
@@ -10,14 +12,21 @@ int foo(int x)
     return 1000;
 }
 
+void constructTree() {
+    BinaryTreeNode<int> rootNode{};
+    insert(new int(0), rootNode);
+    insert(new int(5), rootNode);
+    insert(new int(-5), rootNode);
+}
+
 int main() {
-    char *x = new char[10];
-    x[10] = 'a';
+    char *name = new char[10];
+    name[10] = 'x';
 
-    bool y;
-    foo(y);
+    int var;
+    foo(var);
 
-    char buff[] = "Hello, world!";
-    memcpy(buff + 1, buff, 4);
+    constructTree();
+
     return 0;
 }
